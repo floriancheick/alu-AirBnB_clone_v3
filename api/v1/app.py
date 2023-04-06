@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """app module"""
-from flask import Flask , render_template, make_response, jsonify
-from models import storage
+from flask import Flask, render_template, jsonify, make_response
 from flask_cors import CORS
-from os import getenv
+from models import storage
 from api.v1.views import app_views
+from os import getenv
 
 app =  Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": "0.0.0.0"}})
